@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Astro Escape</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🚀 Astro Escape 🌌</h1>
+
+  <div id="gameArea">
+    <div id="player"></div>
+
+    <!-- Start screen -->
+    <div id="startScreen">
+      <p>Select Difficulty:</p>
+      <button class="difficulty" data-mode="easy">Easy</button>
+      <button class="difficulty" data-mode="medium">Medium</button>
+      <button class="difficulty" data-mode="hard">Hard</button>
+    </div>
+
+    <!-- Countdown -->
+    <div id="countdown"></div>
+
+    <!-- Game Over overlay -->
+    <div id="gameOverOverlay" class="hidden">
+      <h2>Game Over</h2>
+      <p id="finalScore">Final Score: 0</p>
+      <p id="bestScore">Best Score: 0</p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <p id="score">Score: 0</p>
+    <p id="lives">Lives: ❤️❤️❤️</p>
+    <p id="level">Level: 1</p>
+    <p id="difficultyBadge">Mode: —</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

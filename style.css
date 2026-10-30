@@ -1,0 +1,154 @@
+/* Layout */
+body {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 18px 0;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* Game area */
+#gameArea {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 500px;
+  background: radial-gradient(circle at top, #0a0a2a, #000);
+  border: 4px solid #00eaff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+  overflow: hidden;
+}
+
+/* Player */
+#player {
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+  background: url("https://img.icons8.com/ios-filled/50/00eaff/rocket.png")
+    no-repeat center;
+  background-size: cover;
+  transition: left 0.08s linear;
+}
+
+/* Meteor */
+.meteor {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url("https://img.icons8.com/emoji/48/volcano-emoji.png")
+    no-repeat center;
+  background-size: cover;
+  animation: spin 1.8s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Stars */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Start screen & countdown */
+#startScreen,
+#countdown {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  color: yellow;
+  text-shadow: 0 0 6px black;
+  z-index: 50;
+}
+#countdown {
+  font-size: 2.4rem;
+  display: none;
+}
+
+/* Difficulty buttons */
+.difficulty {
+  margin: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00eaff;
+  color: black;
+  font-weight: 700;
+}
+.difficulty:hover {
+  transform: scale(1.05);
+  background: #00ffaa;
+}
+
+/* HUD */
+#hud { margin-top: 12px; }
+#score, #lives, #level, #difficultyBadge {
+  font-size: 1.1rem;
+  margin: 4px;
+  color: #00eaff;
+}
+
+/* Game Over overlay */
+#gameOverOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 10, 20, 0.95);
+  border: 2px solid #ff4d4d;
+  padding: 18px 22px;
+  border-radius: 10px;
+  z-index: 60;
+  width: 260px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 14px rgba(255, 77, 77, 0.4);
+}
+#gameOverOverlay h2 {
+  margin: 6px 0 10px;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px #ff4d4d;
+}
+#restartBtn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  background: #ffd800;
+  color: #000;
+  cursor: pointer;
+}
+#restartBtn:hover {
+  transform: scale(1.04);
+  background: #ff9f00;
+}
+.hidden { display: none; }
+
+
